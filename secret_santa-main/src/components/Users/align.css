@@ -1,0 +1,18 @@
+
+.center_todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;        /* for single line flex container */
+    align-content: center;
+}
+@media only screen and (max-width:640px){
+    .center_todo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;        /* for single line flex container */
+        align-content: center;
+        max-width:95%; max-height:100%; margin:auto;
+    }
+}

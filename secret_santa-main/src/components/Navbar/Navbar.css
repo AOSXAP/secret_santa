@@ -1,0 +1,65 @@
+.navx{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px ;
+    background-color: black;
+}
+
+.navx .logo{
+    font-size: 22px;
+    color: rgb(225, 65, 65);
+    align-self: center;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.navx .links a{
+    margin: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.navx .links a:hover{
+    color: #e14141;
+}
+
+.btn{
+    color: white;
+    border: 2px solid #e14141;
+    align-self: center;
+    background-color: #e14141;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.btn:hover{
+    color: #e14141;
+    background-color: black;
+    border: 2px solid #e14141;
+}
+
+@media only screen and (max-width:640px){
+    .navx{
+        flex-direction: column;
+        padding: 30px;
+        padding:0;
+    }
+
+    .navx h1{width: 100%;text-align: center;padding: 20px 0px;}
+
+    .navx .links{
+        width: 100%;text-align: center;margin: 0 auto;display: flex;justify-content: space-around;padding: 20px 0px;
+    }
+
+    .navx .btn{margin: 10px 0;}
+
+    .navx .links a{
+        text-align: center;
+        margin: 0;
+        width: 33%;
+        text-align: center;
+    }
+
+}

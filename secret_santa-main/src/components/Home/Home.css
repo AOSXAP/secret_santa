@@ -1,0 +1,266 @@
+
+ *{box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.santa {
+
+	background:#3ac6f4;
+	width:120px;
+	height:120px;
+	border-radius:50%;
+	position:relative;
+	top:50%;
+	left:0;right:0;margin:0 auto;
+	bottom:0;
+    margin-top:60px;
+}
+
+.santa .snow {
+	width: 2px;
+	height: 2px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 18px;
+	top: 44px;
+}
+
+
+.santa .snow:after {
+	width: 6px;
+	height: 6px;
+	content: "";
+	display: inline-block;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	top: -14px;
+	left: 0px;
+}
+
+
+
+.santa .snow:before {
+	width: 4px;
+	height: 4px;
+	content: "";
+	display: inline-block;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -12px;
+	left: -11px;
+}
+
+.santa .hat {
+	width: 64px;
+	height: 31px;
+	border-radius: 200px 200px 0 0;
+	background: #ef4753;
+	margin: 0 auto;
+	top: -11px;
+	position: relative;
+	left: 5px;
+	z-index:20;
+}
+
+.santa .hat:after {
+	width: 60px;
+	height: 15px;
+	border-radius: 20px;
+	content: "";
+	display: block;
+	background: white;
+	position: relative;
+	top: 22px;
+	left: -3px;
+}
+
+.santa .face {
+	width: 54px;
+	height: 57px;
+	background: white;
+	border-radius: 0px 0px 50px 50px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 20;
+	top: -6px;
+}
+
+.santa .face .eyes {
+	background:#f1ddd5;
+	width:45px;
+	height:15px;
+	margin:0 auto;
+	position:relative;
+	left:-1px;
+	text-align: center;
+	top:4px;
+	padding-top: 0px;
+}
+
+.santa .face .eyes:after, righteye {
+	width: 8px;
+	height: 6px;
+	background: transparent;
+	box-shadow: 0px -2px #793623;
+	content: "";
+	display:inline-block;
+	margin:0 auto;
+	border-radius: 50%;
+}
+
+.santa .face .eyes:before, lefteye {
+	width: 8px;
+	height: 6px;
+	background: transparent;
+	box-shadow: 0px -2px #793623;
+	content: "";
+	display:inline-block;
+	margin:0 auto;
+	border-radius: 50%;
+	margin-right:5px;
+}
+
+.santa .mouth {
+	background:#a31f2b;
+	border-radius:50%;
+	width:6px;
+	height:6px;
+	position:absolute;
+	bottom:20px;
+	right:17px;
+}
+
+.santa .body {
+	width: 93px;
+	height: 84px;
+	background: #ef4753;
+	border-radius: 90px 90px 0px 0px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	text-align:center;
+	z-index:10;
+}
+
+.santa .body:after {
+	width: 5px;
+	height: 5px;
+	background: white;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	top: 68px;
+	z-index: 50;
+	content: "";
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.santa .body:before {
+	width: 5px;
+	height: 5px;
+	background: white;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	top: 55px;
+	z-index: 50;
+	content: "";
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.santa .hat .hat-end {
+	width: 13px;
+	height: 32px;
+	content: "";
+	background: #ef4753;
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	border-radius: 0px 11px 0px 0px;
+}
+
+.santa .hat .hat-end:after {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: white;
+	content: "";
+	display: inline-block;
+	top: 30px;
+	position: absolute;
+	left: 0px;
+	z-index: 11;
+}
+
+.circles {
+	overflow: hidden;
+	background: #a31f2b;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	z-index: 9;
+	position: absolute;
+	right: -6px;
+	top: 12px;
+}
+
+.circles:after {
+	background:white;
+	width:40px;
+	height:40px;
+	right:0;
+	top:50px;
+	content:"";
+	border-radius:50%;
+}
+
+.dirty-overflow {
+	overflow: hidden;
+	width: 120px;
+	height: 76px;
+	border-radius: 0px 0px 105px 105px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+
+/* pentru bootrstap edit*/
+.card{
+	overflow: hidden;
+    color:black;
+    margin-top:60px;
+	text-align:center;
+}
+
+.xd{
+	overflow: hidden;
+    width:160px !important;
+}
+.footer{
+	overflow: hidden;
+	margin-top:100px;
+    width:100%;
+    height:300px;
+	margin:0 auto;
+	background-color:black;
+	position:relative;
+	bottom: 0;
+}
+@media only screen and (max-width:640px){
+	.footer{
+		position:relative;
+		background-color:black;
+	}
+}

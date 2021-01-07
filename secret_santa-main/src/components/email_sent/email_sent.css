@@ -1,0 +1,27 @@
+.email_sent_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:2%;
+    color:black;
+}
+.email_sent_div .p1{
+margin-top:3%;
+font-size:120%;
+}
+
+
+@media only screen and (max-width:640px){
+	.email_sent_div img{
+        max-width: 100%;
+        max-height: 100vh;
+        width: auto;
+        margin: auto;
+    }
+    .email_sent_div .p1{
+        margin-top:6%;
+        }
+}

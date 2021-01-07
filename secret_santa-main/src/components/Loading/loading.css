@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+.loading{
+    padding-top:20px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+html{
+  height: 100%;
+}
+body{
+  color: rgba(197, 14, 14, 0.75);
+  font-family: 'Montserrat';  
+  background-color: white;  
+  font-weight: 400;
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 50px auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 0s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+@media only screen and (max-width:640px){
+    .loading{
+        width: 90%;
+    }
+
+
+} 
