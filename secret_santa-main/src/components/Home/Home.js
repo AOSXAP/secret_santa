@@ -32,9 +32,13 @@ export default function Home()
               persons to each other to give a present to one another.
             </p>
             <a href="/add" class="btn xd">
+              Verify your email
+            </a>
+            
+          </div>
+          <a href="/add" class="btn xd">
               Create your list
             </a>
-          </div>
         </div>
 
         <div>

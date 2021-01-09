@@ -13,10 +13,6 @@ import Formx from './components/Form.js';
 import Loading from './components/Loading/Loading'
 ///import Email1 from'./components/email_design/email.jsx';
 import Email_sent from './components/email_sent/email_sent';
-import Todo from './components/Users/todo';
-import Todo2 from './components/Users/todo2';
-
-import Align from './components/Users/align';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { User } from 'discord.js';
@@ -61,25 +57,6 @@ firebase.database().ref("users/" + xd).set(
 
 
 function App() {
-  const [users, setusers] = useState([]);
- 
-  useEffect(() => {
-    readDB().then((snapshot) => {const x = snapshot.val();setusers(Object.values(x))});
-  }, []);
-
-  console.log(users)
-
-  const Render = () => {
-    return(
-      users.map((ob) => {
-        return (
-        <div style={{marginBottom:40}}>
-          <h1>{ob.username}</h1>
-          <h2>{ob.email}</h2>
-        </div>
-        )
-    }))
-  }
 
   const OB  = () => {return('hey')}
 
@@ -95,7 +72,7 @@ function App() {
           </Route>
 
           <Route path="/users">
-          {users.length ? <Users users={users}/> : <Loading/>}
+           <Users /> 
           </Route>
 
           <Route path="/email_sent">

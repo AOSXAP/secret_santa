@@ -1,3 +1,34 @@
 .xyz{
    padding-top:50px;
 }
+
+.formx, .btn-submit{
+   margin:20px
+}
+
+
+.half{
+   width: 45%;
+   position: relative;
+}
+
+.full{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.all{width:100%}
+
+.all .addmore{
+   width: 150px;
+   margin-left:20px;
+}
+
+.btn-submit{
+   position: relative;
+   left: 50%;
+   right: 50%;
+   transform: translate(-50%, -50%);
+   margin: 70px 0;
+}
