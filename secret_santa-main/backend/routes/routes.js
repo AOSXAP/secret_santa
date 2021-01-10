@@ -30,6 +30,31 @@ router.post("/access", (req, res, next) => {
     else res.redirect(307, '/test');
 });
 
+router.post('/mailx', (req, res) => {
+
+  const data = req.body;
+
+  const array = Object.values(data)[0];
+
+  
+  var mailOptions = {
+    from: "secretSantaSenderbot@gmail.com",
+    to: `aosxap@gmail.com`,
+    subject: "XDXD",
+    text: JSON.stringify(array),
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      res.sendStatus(200); //update
+    }
+  });
+
+
+})
+
 
 router.get("/err", function (req, res) {
   var results = "err";

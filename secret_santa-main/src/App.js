@@ -15,7 +15,6 @@ import Loading from './components/Loading/Loading'
 import Email_sent from './components/email_sent/email_sent';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { User } from 'discord.js';
 
 var firebaseConfig = {
   apiKey: "AIzaSyD00zhm8WPg0d-eW-3O-Ut5amxU_nkgq00",

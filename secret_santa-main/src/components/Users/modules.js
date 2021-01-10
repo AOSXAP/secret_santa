@@ -1,6 +1,9 @@
 import firebase from "firebase/app";
 import "firebase/database";
 
+const ajax = require('ajax');
+const $ = require('jquery');
+
 async function finduser(email) {
     var d;
     await firebase.database().ref('users/').once('value').then((snapshot) => {
@@ -17,4 +20,18 @@ async function finduser(email) {
     
 }
 
-export {finduser}
+
+const sendEmail = async (newarray) => {
+
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/mailx",
+        data: { data:  newarray }
+    }).done(function (res) {
+        console.log(res);
+    });
+
+}
+
+
+export {finduser, sendEmail}

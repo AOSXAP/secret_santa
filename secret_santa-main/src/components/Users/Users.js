@@ -6,7 +6,7 @@ import Footer from '../Home/footer.svg';
 import firebase from "firebase/app";
 import "firebase/database";
 
-const {finduser} = require('./modules.js')
+const {finduser, sendEmail} = require('./modules.js')
 
 
 
@@ -85,9 +85,11 @@ export default function Home() {
       
     }
 
-    //send email w all
+    const m = newarray;
 
-    console.log(newarray);
+    console.log(m);
+
+    sendEmail(m);
 
   }
 
