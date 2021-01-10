@@ -89,7 +89,7 @@ export default function Home() {
 
     console.log(m);
 
-    sendEmail(m);
+    sendEmail(m,email);
 
   }
 

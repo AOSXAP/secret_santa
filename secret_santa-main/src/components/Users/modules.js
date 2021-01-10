@@ -21,12 +21,12 @@ async function finduser(email) {
 }
 
 
-const sendEmail = async (newarray) => {
+const sendEmail = async (newarray , email) => {
 
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/mailx",
-        data: { data:  newarray }
+        data: { data:  newarray, email:email }
     }).done(function (res) {
         console.log(res);
     });

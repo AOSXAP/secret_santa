@@ -36,10 +36,12 @@ router.post('/mailx', (req, res) => {
 
   const array = Object.values(data)[0];
 
+  console.log(req.body);
+
   
   var mailOptions = {
     from: "secretSantaSenderbot@gmail.com",
-    to: `aosxap@gmail.com`,
+    to: req.body.email,
     subject: "XDXD",
     text: JSON.stringify(array),
   };
