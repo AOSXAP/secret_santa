@@ -1,12 +1,12 @@
 import { Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React from "react";
 import "./Users.css";
-import ReactDOM from 'react-dom';
 import Footer from '../Home/footer.svg';
+import firebase from "firebase/app";
+import "firebase/database";
 
-const ajax = require("ajax");
-const $ = require("jquery");
+const {finduser} = require('./modules.js')
 
 
 
@@ -41,11 +41,16 @@ export default function Home() {
   }
   
 
-  function handlesubmit(e) {
+  async function handlesubmit(e) {
     e.preventDefault();
     let array = [];
+    let email = document.getElementById('emailimp').value;
 
-    console.log(i)
+    const user = await finduser(email);
+    const emailx = user;
+    
+    console.log(emailx)
+
 
     for (var j = 1; j < i; j++) {
       const m = j;
@@ -54,37 +59,47 @@ export default function Home() {
       array.push({ name, email });
     }
 
-    console.log(array);
 
     array.sort(() => Math.random() - 0.5);
 
-    for (let j = 1; j <= i; j++) {
-      array.map((ob) => {
-        const { name, email } = ob;
-
-        $.ajax({
-          type: "POST",
-          url: "http://localhost:8080/access",
-          data: {
-            email,
-            message: name,
-          },
-        }).done(function (res) {
-          console.log(res);
+    array.forEach((ob,index) => {
+      const { name, email } = ob;
+      firebase
+        .database()
+        .ref(`list/`+emailx.id )
+        .child(`${++index}`)
+        .set({
+          name ,
+          email
         });
-      });
+    })
+
+    let newarray = [];
+    for(var k = 0; k<array.length; k++) {
+     
+      if(k != array.length-1) {
+        newarray.push({"sender" : array[k].name,"receiver": array[k+1].name})
+      } else {
+        newarray.push({"sender" : array[k].name,"receiver": array[1].name})
+      }
+      
     }
 
-    console.log(array);
+    //send email w all
+
+    console.log(newarray);
+
   }
+
+
 
   return (
     <>
       <div className="all">
-        <Form className="formx" id="content">
+        <Form className="formx" id="content" onSubmit="return ;">
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address of the host</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" required />
+            <Form.Control id="emailimp" type="email" placeholder="Enter email" required />
             <Form.Text className="text-muted">
               Input here your email address!
             </Form.Text>
@@ -130,7 +145,7 @@ export default function Home() {
       </div>
 
       <div>
-        <img src={Footer} alt="picture not available" className="footer" />
+        <img src={Footer} alt="" className="footer" />
       </div>
     </>
   );

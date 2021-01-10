@@ -36,7 +36,7 @@ export default function Home()
             </a>
             
           </div>
-          <a href="/add" class="btn xd">
+          <a href="/users" class="btn xd">
               Create your list
             </a>
         </div>

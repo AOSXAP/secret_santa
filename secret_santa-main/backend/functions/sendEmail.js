@@ -24,7 +24,7 @@ const sendEmail = async(req,res) => {
          .then(async(snapshot) => {
            const values =  await Object.values(snapshot.val());
             await values.map((obx) => {
-             if (obx.email == ob.email) {
+             if (obx.email === ob.email) {
                    x = 1;
                     }
                   }
